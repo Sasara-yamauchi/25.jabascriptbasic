@@ -19,6 +19,41 @@
         console.log("2" - 1);//文字列ー数値　→数値2-1に変換して計算してくれる
         console.log("2" * 3);
         console.log("2" / 4);
+
+
+        //変数の宣言・代入
+        let a;//変数の宣言
+        a = 10;//値の代入(数値型になる)
+        console.log(a);
+        a = "Hellow";//数値の再代入（文字列型）
+        console.log(a);
+
+        //let a = "world"; //変数の宣言と代入を同時に行っている。再宣言はできないのでエラーになる
+
+        //変数の宣言・代入
+        const PI = 3.14;
+        console.log(PI);
+
+        //再代入
+        //PI = 3.1415926535;//constは再宣言も再代入もできない
+        //const PI;
+        //基本はconstを使用する
+
+
+        //複合代入演算子
+        let n = 5;
+        n = n + 2;
+        console.log(n)
+
+        let n2 = 5;
+        n2 += 2;//複合代入演算子　n+=2;はn2 = n2 +2 と同じ
+        console.log(n2)
+
+
+        //インクリメント
+        let n3 = 5;
+        n3++;//インクリメント　1足す n++;はn=n+1と同じ意味
+        console.log(n3);//6
 ```
 
 
