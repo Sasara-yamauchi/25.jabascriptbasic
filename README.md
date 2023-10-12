@@ -24,14 +24,11 @@
 
 
 ### 変数の宣言・代入
-<<<<<<< Updated upstream
-```js
-=======
+
 
 ```js
 
->>>>>>> Stashed changes
-        //変数の宣言・代入
+    //変数の宣言・代入
         let a;//変数の宣言
         a = 10;//値の代入(数値型になる)
         console.log(a);
