@@ -24,7 +24,13 @@
 
 
 ### 変数の宣言・代入
+<<<<<<< Updated upstream
 ```js
+=======
+
+```js
+
+>>>>>>> Stashed changes
         //変数の宣言・代入
         let a;//変数の宣言
         a = 10;//値の代入(数値型になる)
@@ -49,7 +55,7 @@
         n = n + 2;
         console.log(n)
 
-        let n2 = 5;
+        let n2 = 5; //n2はただの別の文字
         n2 += 2;//複合代入演算子　n+=2;はn2 = n2 +2 と同じ
         console.log(n2)
 
@@ -60,6 +66,29 @@
         console.log(n3);//6
 ```
 
+###　　DOM操作のスクリプト
+
+```js
+ //メロンを加えたい
+        //ul要素を入れる
+        const element = document.querySelector("ul");
+        console.log(element);
+
+        //selectorはCSSのセレクターなので
+        const element2 = document.querySelector("#fruitslist");
+        console.log(element2);
+
+        //classもいける？
+        const element3 = document.querySelector(".listbox__list");
+        console.log(element3);
+
+        //新しい要素を作る
+        const lilast = document.createElement("li");
+        console.log(lilast);//dirに変更。オブジェクトの中身が現れる
+        lilast.textContent = "メロン";
+        console.log(lilast);
+
+```
 
 ## 10 月 5 日
 
