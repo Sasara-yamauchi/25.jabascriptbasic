@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>複数要素の追加</title>
+    <meta charset="UTF-8" />
+</head>
+
+<body>
+    <h1>人気フルーツ一覧</h1>
+    <ul id="fruitslist" class="listbox__list"></ul>
+    <script>
+        //ulの中に果物を一度にliで入れたい
+        //配列fruitsの宣言・値を代入
+        const fruits = ["りんご", "もも", "バナナ"];
+
+        //バナナがほしい
+        console.log(fruits[2]);
+
+        //fruitsの要素数ぶんだけfor文で返す
+        for (let i = 0; i < fruits.length; i++);
+
+        //ulを取得
+        const element = document.querySelector("#fruitslist");
+        //fruitslistの要素数ぶんだけfor文でまわす
+        for (let i = 0; i < fruits.length; i++) {
+            //liを作るl
+            const lilast = document.createElement("li");
+            //liに値（果物→配列fruitsの中にある）を代入
+            console.log(fruits[i])//りんごももバナナが取れる
+            //作ったliの内容に果物を代入
+            lilast.textContent = fruits[i];
+            //element(#ul)のなかの最後に追加
+            element.appendChild(lilast);
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>
