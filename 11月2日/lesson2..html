@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>イベント演習２</title>
+    <!-- 下記 html 内の「赤くなる」ボタンと「大きくなる」ボタンをそれぞれクリックすると 「JavaScript」の文字を setAttribute を使って、css の 適切な class が反映されるようにしてください。※片方ずつで OK -->
+
+    <style>
+        .redText {
+            color: red;
+        }
+
+        .bigText {
+            font-size: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <p><span>JavaScript</span>（ジャバスクリプト）とは、プログラミング言語のひとつである。</p>
+    <button class="redder">赤くなる</button>
+    <button class="bigger">大きくなる</button>
+    <script>
+        //element.setAttribute("class","cssでつけたクラス名")
+        const jstext = document.querySelector("p", "span");
+        //赤くなる
+        const btnRed = document.querySelector(".redder");
+        btnRed.addEventListener("click", function () {
+            //属性値の値を設定
+            jstext.classList.toggle("redText");
+            btnRed.textContent = "元に戻す";
+
+        })
+
+
+        //大きくなる
+        const btnBig = document.querySelector(".bigger");
+        btnBig.addEventListener("click", function () {
+            jstext.classList.toggle("bigText");
+            btnBig.textContent = "元に戻す";
+        })
+
+    </script>
+</body>
+
+</html>
