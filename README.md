@@ -8,6 +8,8 @@
 - i++
 i++ は　i = i+1 と同じ
 =は同じという意味ではなく値を左に代入するという意味
+
+- for文
 ```js
 for(let i=0;　　　　　　　　　　　i<要素.length;　　i++　　)
 
@@ -17,13 +19,22 @@ for(let i=0;　　　　　　　　　　　i<要素.length;　　i++　　)
 - 条件分岐
 教科書p96
 
+- if文
+if(   条件式   ){どうするか
+}else if(  条件式    ){どうするか
+}else{
+どうするか
+};
+
 - createElement
 新しい要素を作る
 
 - appendChild
 要素を追加する
 
-- クリックイベント
+
+
+
 
 
 
