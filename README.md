@@ -4,6 +4,29 @@
  2. 10月5日（木）Githubリポジトリ作成
 
 
+## 11 月　9 日
+- i++
+i++ は　i = i+1 と同じ
+=は同じという意味ではなく値を左に代入するという意味
+```js
+for(let i=0;　　　　　　　　　　　i<要素.length;　　i++　　)
+
+// 　↑初期化のやつとりあえず書く   ↑どれだけ回すか    ↑書く
+```
+
+- 条件分岐
+教科書p96
+
+- createElement
+新しい要素を作る
+
+- appendChild
+要素を追加する
+
+- クリックイベント
+
+
+
 ## 10 月　19 日
 - コレクション（配列）
 定義してから使用
@@ -97,6 +120,14 @@ for (let i = 0; i < 9; i++) {
         console.log(lilast);//dirに変更。オブジェクトの中身が現れる
         lilast.textContent = "メロン";
         console.log(lilast);
+
+        //リストの最後に追加する
+        //<li>メロン</li>を変数element内の<ul></ul>に追加する
+        element.appendChild(lilast);
+
+        const lilast2 = document.createElement("li");
+        lilast2.textContent = "いちご";
+        element.appendChild(lilast2);
 
 ```
 
