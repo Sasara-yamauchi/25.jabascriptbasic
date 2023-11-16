@@ -32,7 +32,8 @@ if(   条件式   ){どうするか
 - appendChild
 要素を追加する
 
-
+-
+const 変数　= document.querySelector("class名とか要素名")
 
 
 
