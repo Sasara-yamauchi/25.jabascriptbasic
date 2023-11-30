@@ -43,7 +43,7 @@ const 変数　= document.querySelector("class名とか要素名")
 - コレクション（配列）
 定義してから使用
 const 変数名　= ["要素0","要素1",...];
-取得する
+取得するg
 console.log(変数名[要素番号]);
 
 - for文による繰り返し
