@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>グローバル変数とローカル変数</title>
+</head>
+
+<body>
+    <script>
+        // const globalData = "hogehoge";//グローバル変数
+        // //関数式
+        // const foobaa = function () {
+        //     const localData = "fugafuga";//ローカル変数
+
+        // };
+
+        // console.log(globalData);//表示される
+        // //console.log(localData); //エラー
+
+
+
+        const globalData = "hogehoge";//グローバル変数
+        const foobaa = function () {
+            const globalData = "fugafuga";//ローカル変数だけどグローバルと変数が同じ
+            console.log(globalData);//fugafuga ＊ローカル変数はグローバルよりも優先されるかつ外に出れない
+        };
+        console.log(globalData);//fugafuga ＊グローバル変数
+        //関数の中だけでなく{}（ブロック）のなかでしか以下使えない
+        //外でローカル変数を使いたいときはreturn(戻り値)を使う
+
+    </script>
+</body>
+
+</html>
