@@ -3,6 +3,63 @@
  1. 10月5日（木）はじめの一歩
  2. 10月5日（木）Githubリポジトリ作成
 
+## 12 月　14 日
+
+- アロー関数
+    - thisが使えないので注意
+```js
+    //いつもの
+   const dog = function () {
+            return "わんわん";
+        };
+
+     console.log(dog());
+
+
+     //アロー関数
+
+     const cat = ()=>{
+        return "ミャーミャー";
+     }
+     console.log(cat());
+```
+
+- setTimeout()
+グローバルの setTimeout() メソッドは、時間切れになると関数または指定されたコードの断片を実行するタイマーを設定する。
+
+- コールバック関数
+    - タイミングをずらしたりするときに使う
+```js
+
+        //基本的なコールバック関数
+        //関数式１
+        //③ ②callback→func [②のとこにあったtestFuncがある]
+        const testFunc = function (func) {
+            //funcには関数式２
+            //関数の実行後直ぐに表示
+            console.log("testFuncが実行されました");
+
+            //２秒後、実行
+            setTimeout(function () {
+                //④ ③func→func
+                func();
+            }, 2000);
+        };
+        //関数式２
+        //① callback
+        const callback = function () {
+            console.log("callbackが実行されました");
+        };
+
+        //関数式１を実行している
+        //callbackは関数式２の関数名
+        //② ①callback→callback [①のcallbackがある]
+        testFunc(callback);
+
+
+```
+
+
 ## 12 月　9 日
 - 関数
 ```js
