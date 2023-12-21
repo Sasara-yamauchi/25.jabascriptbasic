@@ -1,1 +1,57 @@
 @charset "UTF-8";
+
+
+.slide {
+    display: flex;
+    width: 80%;
+    overflow: hidden;
+    margin: auto;
+}
+
+.slide img {
+    width: 100%;
+    min-width: 100%;
+    /*最低でも100%*/
+
+    transition: 2s;
+
+}
+
+
+.slide img:first-child {
+    margin-left: -100%;
+}
+
+.buttons {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.slide img {
+    position: relative;
+}
+
+.leftBtn {
+    position: absolute;
+    z-index: 9999;
+    left: 12%;
+    top: 35%;
+    transform: scale(3);
+    border: none;
+    background-color: unset;
+    color: #fff;
+}
+
+.rightBtn {
+    position: absolute;
+    z-index: 9999;
+    right: 12%;
+    top: 35%;
+    transform: scale(3);
+    border: none;
+    background-color: unset;
+    color: #fff;
+
+}

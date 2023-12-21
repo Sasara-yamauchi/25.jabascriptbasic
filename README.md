@@ -3,6 +3,54 @@
  1. 10月5日（木）はじめの一歩
  2. 10月5日（木）Githubリポジトリ作成
 
+## 12 月　21　日
+-
+    - removeAttribute --要素から属性を消す
+    - insertBefore -----appendChildの逆、前にいれる
+
+
+
+```js
+
+//関数化する前
+const rightBtn = document.querySelector(".rightBtn");
+
+rightBtn.addEventListener("click", () => {
+    const slideimages = document.querySelectorAll(".slide img");
+    slideimages[1].removeAttribute("style");//要素を消す
+    slideimages[0].style.marginLeft = "0"
+    slide.insertBefore(slideimages[slideimages.length - 1], slideimages[0]);
+})
+
+
+↓
+
+//関数化したとき
+
+const rightBtn = document.querySelector(".rightBtn");
+
+const rightSlider = () => {
+    const slideimages = document.querySelectorAll(".slide img");
+    slideimages[1].removeAttribute("style");//要素を消す
+    slideimages[0].style.marginLeft = "0"
+    slide.insertBefore(slideimages[slideimages.length - 1], slideimages[0]);
+}
+
+rightBtn.addEventListener("click", rightSlider)
+
+rigthBtn.addEventListener("click",)
+
+
+```
+
+
+
+
+
+
+
+
+
 ## 12 月　14 日
 
 - アロー関数
