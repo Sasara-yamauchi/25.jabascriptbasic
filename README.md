@@ -3,6 +3,53 @@
  1. 10月5日（木）はじめの一歩
  2. 10月5日（木）Githubリポジトリ作成
 
+
+
+
+
+## 1 月　11 日
+- ===　 は型も含めて一緒
+    -formの値は文字列になるのでNumber()で数値型に変換する
+- オブジェクト
+```js
+    //オブジェクトを作る
+    const sample = {
+            キー: "値",
+            キー2: "値2"
+        };
+
+    //コンソールに表示する
+    console.log(sample);
+    //コンソールに値2を表示する
+    console.log(sample.キー2);
+    //.ではなく[]でやる方法
+    console.log(sample["キー2"]);
+
+    //外側から新しく作る
+    sample.キー3 = "値3"
+
+    //削除する
+    delete sample.キー１;
+
+    //再代入(上書き)
+    sample.キー二="値二";
+
+
+ const person = {
+                name: "",
+                age: 0,
+
+            information: function () {
+                    return "名前:" + this.name + "\n年齢:" + this.age;
+                    //thisはperson
+                                    }
+                };
+        person.name = "山田太郎";
+        person.age = 18;
+        // console.log(person.name, person.age);
+        console.log(person.information());
+```
+
 ## 12 月　21　日
 -
     - removeAttribute --要素から属性を消す

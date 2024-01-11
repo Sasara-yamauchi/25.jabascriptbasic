@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>オブジェクト</title>
+</head>
+
+<body>
+    <script>
+        const person = {
+            name: "",
+            age: 0,
+
+            information: function () {
+                return "名前:" + this.name + "\n年齢:" + this.age;
+                //thisはperson
+            }
+        };
+        person.name = "山田太郎";
+        person.age = 18;
+        // console.log(person.name, person.age);
+        console.log(person.information());
+
+
+
+        const myCar_list = {}; //空のオブジェクトを作成
+        myCar_list.make = "Ford";
+        myCar_list.model = "Mustang";
+        myCar_list.year = 1969;
+        console.log(myCar_list);
+        //{make: 'Ford', model: 'Mustang', year: 1969}
+        //オブジェクトの値を取りたいときは.でつなぐ
+        //Mustangをコンソールに表示
+        console.log(myCar_list.model)
+        //1969をコンソールに表示
+        console.log(myCar_list.year)
+
+        //.ではなく[]ブランケットで取る場合設定
+        myCar_list["2021"] = "51年";
+        console.log(myCar_list)
+        console.log(myCar_list["2021"])
+        //(余談)オブジェクトは記述した順番通りに表示されない
+
+
+
+
+        //オブジェクトを作る
+        const dict = {
+            apple: "りんご",
+            banana: "バナナ",
+            orange: "オレンジ"
+        };
+        //外側から新しく作る
+        dict.grape = "ぶどう"
+        //削除
+        delete dict.orange;
+        console.log(dict)
+        //コンソール→{ apple: "りんご", banana: "バナナ",grape="ぶどう"}
+
+        //再代入(上書き)
+        dict.apple = "林檎";
+        console.log(dict);
+        // { apple: "林檎", banana: "バナナ", grape = "ぶどう" }
+    </script>
+</body>
+
+</html>

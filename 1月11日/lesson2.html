@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>演習オブジェクト操作</title>
+</head>
+
+<body>
+    <script>
+
+        //問題１
+        const championship = {
+            y2018: "大阪桐蔭",
+            y2019: "履正社",
+            y2020: "新型コロナ感染拡大の影響で中止",
+            y2021: "智弁和歌山",
+            y2022: "仙台育英",
+            y2023: "慶応",
+        }
+        const selection = {
+            2018: "大阪桐蔭",
+            2019: "東邦",
+            2020: "新型コロナ感染拡大の影響で中止",
+            2021: "東海大相模",
+            2022: "大阪桐蔭",
+            2023: "山梨学院",
+        }
+        //2023年の優勝校をドットでコンソールに表示
+        console.log(championship.y2023);
+        //2023年の選抜優勝校をコンソールに表示
+        console.log(selection["2023"]);
+
+        //余談
+        console.log(championship["y2021"])
+
+
+
+
+
+        //問題２-1
+        //hashira_list に下記の表から新たに”キー”.”値”で追加し、console に表示させてください。
+        const hashira_list = {
+            water: "鱗滝左近次",
+            worm: "胡蝶しのぶ",
+            flame: "煉獄杏寿郎",
+            sound: "宇髄天元",
+            love: "甘露寺蜜璃"
+        };
+        hashira_list.rock = "悲鳴嶼行冥";
+        hashira_list.haze = "時透無一郎";
+        hashira_list.snake = "伊黒小芭内";
+        hashira_list.wind = "不死川実弥";
+        console.log(hashira_list)
+
+        //問題2-2
+        //水柱の氏名をブラケット記法で冨岡義勇に書き換えて、console に表示させてください。
+        hashira_list.water = "冨岡義勇";
+        console.log(hashira_list);
+
+    </script>
+</body>
+
+</html>
