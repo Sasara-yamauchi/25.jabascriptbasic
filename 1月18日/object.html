@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>オブジェクトのfor文</title>
+</head>
+
+<body>
+    <script>
+        const countries = {
+            Japan: "日本",
+            USA: "アメリカ",
+            China: "中国",
+            Korea: "韓国",
+        };
+
+        for (let key in countries) {
+            console.log(key + ":" + countries[key]);
+        }
+
+        //日本, アメリカ, 中国, 韓国
+
+        //アメリカをコンソールに表示
+        console.log(countries.USA);
+        console.log(countries["USA"]);
+
+        //for...in文 オブジェクトを取得したい時のfor文
+        for (let country in countries) {
+            console.log(countries[country])
+            //文字列になるのでブランケットで取得
+        }
+
+        //受験者名簿（オブジェクトの配列）
+        const meibo_obj = [//←[]で囲まれているので配列
+
+            //↓{}で囲まれているのでオブジェクト
+            { id: "20224", name: "新井太郎" },
+            { id: "20031", name: "井上次郎" },
+            { id: "20193", name: "山本花子" }
+        ];
+        //オブジェクトが3つはいっているオブジェクト
+        //配列の要素が欲しい for文で回す
+
+        for (let i = 0; i < meibo_obj.length; i++) {
+            console.log(meibo_obj[i]);
+
+            //配列の中にオブジェクトがあるので配列を回している中にin...for文
+            for (let key in meibo_obj[i]) {
+
+                console.log(meibo_obj[i][key])
+            }
+
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

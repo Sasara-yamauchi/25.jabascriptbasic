@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>配列の操作</title>
+</head>
+
+<body>
+    <ul>
+        <li>りんご</li>
+        <li>みかん</li>
+        <li>パイナップル</li>
+    </ul>
+    <script>
+        //値の変更は添字で指定できる
+        const animals = ["dog", "cat", "bird"];
+        animals[2] = "lion";
+        console.log(animals);
+
+        //末尾に要素を追加する
+        animals.push("tiger");
+        console.log(animals.length);
+        console.log(animals);
+
+        //先頭に要素を追加する
+        animals.unshift("elephant");
+        console.log(animals);
+
+        //末尾の要素を削除する
+        animals.pop();
+        console.log(animals);
+        //["elephant", "dog", "cat", "lion"];
+
+        //先頭の要素を削除する
+        animals.shift();
+        console.log(animals);
+        //["dog", "cat", "lion"];
+
+        //NodelistやHTMLCOllectionは配列の便利なメソッドは使えない
+        const fruits = document.querySelectorAll("li")
+        console.log(fruits);//Nodelist(配列のようなもの　arraylike)
+        // fruits.push("<li>いちご</li>")//エラーになる
+
+
+
+
+        const staff = [
+            ["佐藤", 41, "東京"],
+            ["鈴木", 25, "大阪"],
+            ["林", 34, "札幌"],
+        ];
+
+
+        for (let i = 0; i < staff.length; i++) {
+            //佐藤鈴木林を取りたい
+            console.log(staff[i][0]);
+            //[i]でstaffの配列３個[][][]を取得、[0]はそのなかの配列一個一個の[0 1 2]の添字
+
+            //要素を全部取りたい
+            //ネストの場合iの次はjを使う　i→j→k
+            //for文のネストは3回まで　４回になるときはどこかがおかしい
+            for (let j = 0; j < staff[i].length; j++) {
+                console.log(staff[i][j]);
+
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

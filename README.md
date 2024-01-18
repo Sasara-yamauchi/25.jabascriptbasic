@@ -5,6 +5,28 @@
 
 
 
+## 1 月 18 日
+-
+
+- オブジェクト操作
+```js
+  const animals = ["dog", "cat", "bird"];
+
+    ///値の変更　添字でできる
+    animals[2] = "lion";
+
+    //先頭に要素を追加する
+    animals.unshift("elephant");
+
+    //先頭の要素を削除する
+    animals.shift();
+
+    //末尾に要素を追加する
+    animals.push("tiger");
+
+    //末尾の要素を削除する
+    animals.pop();
+```
 
 
 ## 1 月　11 日
@@ -42,6 +64,7 @@
             information: function () {
                     return "名前:" + this.name + "\n年齢:" + this.age;
                     //thisはperson
+                    //returnはレ点
                                     }
                 };
         person.name = "山田太郎";
