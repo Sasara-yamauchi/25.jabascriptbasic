@@ -6,7 +6,53 @@
 
 
 ## 1 月 18 日
--
+- for…in文
+オブジェクトを取得したい時のfor文
+  ```js
+
+        const countries = {
+            Japan: "日本",
+            USA: "アメリカ",
+            China: "中国",
+            Korea: "韓国",
+        };
+
+        for (let key in countries) {
+            console.log(key + ":" + countries[key]);
+        }
+
+        for (let country in countries) {
+            console.log(countries[country])
+            //文字列になるのでブランケットで取得
+        }
+
+
+
+
+        //受験者名簿（オブジェクトの配列）
+        const meibo_obj = [//←[]で囲まれているので配列
+
+            //↓{}で囲まれているのでオブジェクト
+            { id: "20224", name: "新井太郎" },
+            { id: "20031", name: "井上次郎" },
+            { id: "20193", name: "山本花子" }
+        ];
+        //オブジェクトが3つはいっているオブジェクト
+        //配列の要素が欲しい for文で回す
+
+        for (let i = 0; i < meibo_obj.length; i++) {
+            console.log(meibo_obj[i]);
+
+            //配列の中にオブジェクトがあるので配列を回している中にin...for文
+            for (let key in meibo_obj[i]) {
+
+                console.log(meibo_obj[i][key])
+            }
+
+        }
+  ```
+
+
 
 - オブジェクト操作
 ```js
