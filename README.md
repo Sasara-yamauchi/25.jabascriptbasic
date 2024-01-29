@@ -22,7 +22,13 @@ const npb2023 = [
 
 //[]のなかに｛｝があるので外側のnpb2023を回してから内側の｛｝を回す
 
-
+   for (let team of npb2023) {
+            console.log(team);//要素=各チームの成績
+            for (let key in team)//teamの中にオブジェクトがはいっているので
+            {
+                console.log(team[key])
+            }
+        }
 ```
 
 ## 1 月 18 日
