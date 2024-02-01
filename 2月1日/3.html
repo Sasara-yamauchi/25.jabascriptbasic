@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 問題3 -->
+    <h1>三大栄養素</h1>
+    <ul>
+        <li class="protein">たんぱく質</li>
+        <li class="fats">脂質</li>
+        <li class="carbohydrate">炭水化物</li>
+    </ul>
+
+    <!-- 問題４ -->
+
+    <div class="counter">
+        <button class="decrease">-</button>
+        <span class="count">0</span>
+        <button class="increase">+</button>
+    </div>
+
+
+    <!-- 問題５ -->
+    <button id="openModalBtn">Open Modal</button>
+
+    <div class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>モーダルウィンドウです。</p>
+        </div>
+    </div>
+
+    <style>
+        .modal {
+            transition: all 1s ease-in;
+            opacity: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #eee;
+            border: 1px solid #cdcdcd;
+            padding: 1rem;
+        }
+
+        .modal.active {
+            opacity: 1;
+        }
+    </style>
+
+    <!-- 問題６ -->
+    <div class="tab">
+        <button class="tablinks">Tab1</button>
+        <button class="tablinks">Tab2</button>
+        <button class="tablinks">Tab3</button>
+    </div>
+
+    <div class="tabcontent show">
+        <h3>Tab1</h3>
+        <p>タブ1のコンテンツです。</p>
+    </div>
+    <div class="tabcontent">
+        <h3>Tab2</h3>
+        <p>タブ2のコンテンツです。</p>
+    </div>
+    <div class="tabcontent">
+        <h3>Tab3</h3>
+        <p>タブ3のコンテンツです。</p>
+    </div>
+
+
+    <style>
+        .tabcontent.show {
+            display: block;
+        }
+
+        .tabcontent {
+            display: none;
+        }
+    </style>
+
+
+    <!-- 問題７ -->
+    <ul class="list">
+        <li>バナナ</li>
+        <li>りんご</li>
+        <li>みかん</li>
+        <li>パイナップル</li>
+    </ul>
+    <button class="resultBtn">結果を表示</button>
+    <ul class="result"></ul>
+
+    <script>
+
+        //３．<li>をクリックすると、それぞれの栄養素をコンソールに表示するJavaScriptを記述してください。※なるべくquerySelectorAllを使ってfor文でループさせてください。
+
+        const li = document.querySelectorAll("li");
+        for (let i = 0; i < li.length; i++) {
+            li[i].addEventListener("click", function () {
+                console.log(li[i].textContent)
+            })
+        }
+
+        //４．カウントするプログラムを書いてください。ただし、マイナスにはならないようにしてください。
+        const decrebtn = document.querySelector(".decrease");
+        const num = document.querySelector(".count");
+        const increbtn = document.querySelector(".increase");
+
+        let count = 0;
+        decrebtn.addEventListener("click", function () {
+            count--;
+            if (count < 0) {
+                count = 0;
+            }
+            num.innerHTML = count;
+
+        })
+
+        increbtn.addEventListener("click", function () {
+            count++;
+            num.innerHTML = count;
+        })
+
+
+
+        // ５．"Open Modal"ボタンをクリックするとモーダルウィンドウが表示される機能を作成してください。モーダルには閉じるボタンも設けてください。
+
+        const openModalBtn = document.querySelector("#openModalBtn");
+        const modal = document.querySelector(".modal");
+        const closeBtn = document.querySelector(".modal .close");
+
+        openModalBtn.addEventListener("click", function () {
+            modal.classList.add("active");
+        });
+
+        closeBtn.addEventListener("click", function () {
+            modal.classList.remove("active");
+        });
+
+
+
+        //６．3つのタブを持つタブ切り替えコンポーネントを作成してください。各タブは異なるコンテンツを表示します。
+
+        const tabElements = document.querySelectorAll(".tablinks");
+        const contentElements = document.querySelectorAll(".tabcontent");
+        // 初期状態
+        let activeTab = 0;
+
+        for (let i = 0; i < tabElements.length; i++) {
+            tabElements[i].addEventListener("click", function () {
+                // アクティブなタブを変更
+                activeTab = i;
+                // コンテンツ要素の表示を切り替え
+                for (let j = 0; j < contentElements.length; j++) {
+                    contentElements[j].classList.remove("show");
+                }
+                contentElements[activeTab].classList.add("show");
+            });
+        }
+
+        //７．用意されたlistをクリックすると、配列fruitsArrayに追加（push）されます。「結果を表示」ボタンを押すと、追加された配列が<li>で表示される仕組みを作ってください。※初期化して、配列の内容は1つのみ表示されるようにしましょう。
+
+        const fruitsArray = ["キウイ", "パパイヤ", "マンゴー"];
+
+        const listElements = document.querySelectorAll(".list li");
+        const resultElements = document.querySelectorAll(".result li");
+
+        fruitsArray = [];
+
+        for (let i = 0; i < listElements.length; i++) {
+            listElements[i].addEventListener("click", function () {
+
+                fruitsArray.push(this.textContent);
+            });
+        }
+
+        const resultBtn = document.querySelector(".resultBtn");
+        resultBtn.addEventListener("click", function () {
+
+            resultElements.innerHTML = "";
+
+
+            for (const fruit of fruitsArray) {
+
+                resultElements.appendChild(document.createElement("li").textContent = fruit);
+            }
+        });
+
+
+        //8.各liをクリックすると関数sayによって、文章が表示される関数sayを定義してください。
+        //晴れ：「今日は良い天気で、気持ちが良いです。」 雨：「雨音が心地よく、静かな時間を楽しめます。」 曇り：「曇り空、穏やかな一日が待っている感じです。」 雪：「雪景色が美しく、雪合戦やスキーに最適です。」
+
+
+
+        // 天気に対応した文章を定義
+        const weathers = {
+            "晴れ": "今日は良い天気で、気持ちが良いです。",
+            "雨": "雨音が心地よく、静かな時間を楽しめます。",
+            "曇り": "曇り空、穏やかな一日が待っている感じです。",
+            "雪": "雪景色が美しく、雪合戦やスキーに最適です。",
+        };
+
+        // 関数sayを定義
+        function say(weather) {
+            // 天気に対応した文章を取得
+            const opinion = weathers[weather];
+
+            // 意見を表示
+            const opinionElement = document.querySelector(".opinion");
+            opinionElement.textContent = opinion;
+        }
+
+        // リスト要素を取得
+        const wea = document.querySelectorAll(".weather li");
+
+        // リストをクリックしたときにイベントを実行
+        for (let word of weathers) {
+            word.addEventListener("click", () => {
+                say(word.textContent);
+            });
+        }
+    </script>
+</body>
+
+</html>

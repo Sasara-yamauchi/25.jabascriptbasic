@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        //１．下記の変数を使って（計算して）、文章「大谷翔平の背番号は17です。」を完成させてbody内にpタグで追加してください。※用意した変数以外は使わないでください。
+        const name = "大谷翔平の";
+        const number = "背番号は";
+        const num = "20";
+        const two = 2;
+        const seven = 7;
+        const ending = "です。"
+
+        //大谷翔平の背番号は17です。
+        const ohtaniText = document.createElement("p");
+        console.log(num - seven + two + two)
+        ohtaniText.textContent = name + number + (num - seven + two + two) + ending;
+        document.body.appendChild(ohtaniText);
+
+
+        //2．下記の緑黄色社会のアルバム「pink blue」の楽曲を変数 pinkBlueに配列として代入して、「ミチヲユケ」をbodyにpタグで追加ください。
+        pinkBlue = [
+            "ピンクブルー",
+            "Starry Drama",
+            "ジブンセイフク",
+            "あうん",
+            "ミチヲユケ",
+            "うそつき",
+            "陽はまた昇るから",
+            "湿気っている",
+            "Don!! White Rabbit",
+            "さもなくば誰がやる",
+            "Slow dance"
+        ]
+        const pElm = `<p>${pinkBlue[4]}</p>`;
+        document.body.innerHTML = pElm;
+
+        //３．下記の < li > をクリックすると、それぞれの栄養素をコンソールに表示するJavaScriptを記述してください。※なるべくquerySelectorAllを使ってfor文でループさせてください。
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
